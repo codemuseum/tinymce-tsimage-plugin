@@ -1,0 +1,11 @@
+h1. TinyMCE TSImage Plugin
+
+This plugin is essentially the same as the @advimg@ plugin, only it also has a tab that features previously uploaded images on their ThriveSmart 
+Site, as well as a form for users to upload images to their ThriveSmart Site.
+
+h2. Installation
+
+Simply copy the @jscripts/tiny_mce/plugins/tsimage@ directory into your TinyMCE plugins directory.  
+
+This plugin has also been precompiled to work with the CDN version of TinyMCE by Matthew Moore.  
+Please see: http://github.com/moorage/tinymce-cdn
