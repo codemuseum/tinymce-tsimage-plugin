@@ -20,7 +20,7 @@ var ImageDialog = {
       	iframe1.style.visibility="hidden";
       	iframe1.setAttribute('id','tinymce_image_upload_frame');
       	document.getElementById('image-upload').appendChild(iframe1);
-      	document.getElementById('upload_panel_form').setAttribute("action", "/pictures.js");
+      	document.getElementById('upload_panel_form').setAttribute("action", "/site/pictures.js");
       	this.uploadFrameCreated = true;
   	  }
     },
@@ -54,7 +54,7 @@ var ImageDialog = {
     },
     fetchGalleryImages : function() {
 			tinymce.util.XHR.send({
-				url : '/pictures.json',
+				url : '/site/pictures.json',
         type : 'GET',
         // params : p,
 				success : function(txt) {
