@@ -45,11 +45,12 @@ var ImageDialog = {
     	mcTabs.displayTab('general_tab','general_panel');
     },
     setUploadedImage : function(data) {
-      r = tinymce.util.JSON.parse(data);
+      var r = tinymce.util.JSON.parse(data);
+      var pic = r['picture'];
       document.getElementById('image_uploaded_data').value = '';
       document.getElementById('image_uploaded_title').value = '';
       document.getElementById('loading_alert').style.display="none";
-      this.setImage(r.url, r.title, r.title + " Picture");
+      this.setImage(pic.url, pic.title, pic.title + " Picture");
       this.fetchGalleryImages();
     },
     fetchGalleryImages : function() {
