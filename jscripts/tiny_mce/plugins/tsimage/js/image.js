@@ -61,7 +61,8 @@ var ImageDialog = {
 				  var r = tinymce.util.JSON.parse(txt);
 				  var html = '';
 				  for (var i = 0; i < r.length; ++i) {
-				    html += '<img src="'+r[i].url+'" style="width:100px;cursor:pointer" alt="'+r[i].title+' Picture" title="'+r[i].title+'" onclick="ImageDialog.TS.setImage(this.src, this.title, this.alt);"> ';
+				    var pic = r[i]['picture'];
+				    html += '<img src="'+pic.url+'" style="width:100px;cursor:pointer" alt="'+pic.title+' Picture" title="'+pic.title+'" onclick="ImageDialog.TS.setImage(this.src, this.title, this.alt);"> ';
 				  }
   			  tinyMCEPopup.dom.setHTML('preview', html);
   			},
